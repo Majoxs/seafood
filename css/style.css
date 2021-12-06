@@ -62,6 +62,41 @@ a {
   border-bottom: 1px solid #001e64;
 }
 
+.menu__btn {
+  width: 40px;
+  border: none;
+  background-color: transparent;
+  padding: 10px 0;
+  cursor: pointer;
+  position: relative;
+  display: none;
+  z-index: 10;
+}
+
+.menu__btn::after,
+.menu__btn::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #001e64;
+}
+
+.menu__btn::after {
+  bottom: 0;
+}
+
+.menu__btn::before {
+  top: 0;
+}
+
+.menu__btn span {
+  display: block;
+  height: 2px;
+  background-color: #001e64;
+}
+
 .header__content {
   background-image: url('../images/header-bg.png');
   background-size: cover;
@@ -173,7 +208,7 @@ a {
 
 .header__content-box {
   display: flex;
-  margin-left: 100%;
+  justify-content: flex-end;
   margin-right: 30px;
   font-size: 18px;
   line-height: 21px;
@@ -454,4 +489,3 @@ a {
 .footer-social__link:hover path{
   fill: #001E64;
 }
-
